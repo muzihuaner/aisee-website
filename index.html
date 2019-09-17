@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="favicon.ico" />
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+	<meta charset="utf-8">
+<style type="text/css">
+  	 /* @font-face {
+  font-family: NuvoMediumWOFF;
+  src: url(nuvo-medium-woff-demo.woff) format("woff");
+       
+}*/
+		body{
+	font-family: "ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+	background: #2B2B2B;
+		}
+	::selection {
+    	background:#00B388;
+    	color:#fff;
+	}
+	.kw input::selection {
+    	background:#00B388;
+    	color:#fff;
+	}
+	a:link {color: #00B388}
+	a:visited {color: #00B388}
+	a:hover {color: #74D6C2} 
+
+  	  .content{
+		position: ;
+  	  	margin: 17% 0 0 0;
+  	  	width:100%;
+  	  	height: auto;
+  	  	float: left;
+  	  	font-family: "ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+  	  	
+ 	  }
+  	  .kw{
+  	  	display:inline-block;
+  	  	height: ;
+  	  	width:19%; 
+  	  	vertical-align: top;
+  	  	margin-top: 56px;
+  	  	margin-left: 4px;
+  	  	position: fixed;
+  	  }
+
+  	  .kw input{
+  	  	width:100%; 
+  	  	height:48px; 
+  	  	font-size:26px;
+  	  	color: white;
+  	  	border-width: 0px;
+  	  	border-radius: 30px;
+  	  	background-color: #3F3F3F;
+  	  	padding-left: 14px;
+  	  	padding-right: 14px;
+  	  	padding-top: 6px;
+  	  	font-family: "ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", sans-serif;
+  	  	outline: none;
+  	  }
+
+  	  .searchicon{
+  	  	z-index: 2;
+  	  	position: absolute;
+		margin-left: 87%;
+  	  }
+
+  	  .info{
+  	  	position: fixed;
+  	  	bottom: 4%;
+  	  	width:19%; 
+  	  	font-family:"ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+  	  	font-size: 9pt; 
+  	  	color: #6F6F6F;
+
+
+  	  }
+  	  .popular{
+  	  	display: inline-block;
+  	  	width: 70px;
+  	  	margin-left: 23%;
+  	  	padding-top: 14px;
+  	  }
+  	  .entrances{
+  	  	display: inline-block;
+  	  	vertical-align: top;
+  	  	width: 70%;
+  	  	/*background: red;*/
+  	  }
+  	  .catalog{
+  	  	float: left;
+  	  	width: 160px;
+  	  	background: #2B2B2B;
+  	  	height: auto;
+  	  	position: relative;
+  	  	margin: 0px 6px 80px 6px;
+  	  	padding-top: 14px;
+  	  }
+  	  .catalogname{
+  	  	font-size: 16pt;
+  	  	font-weight: 500;
+  	  	text-align: center;
+  	  	margin: 0;
+  	  	color: #00B388;
+  	  
+  	  	font-family:"ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+  	  }
+  	  .pop{
+  	  	display:inline-block;
+  	  	
+  	  	width:40px;
+  	  	height:40px;
+  	  	border-radius: 20px;
+  	  	box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 1);
+  	  	border: 6px white;
+  	  }
+  	  .more_list {
+  	  	background: #333333;
+  	  	position: absolute;
+  	  	z-index: 2;
+  	  	height: auto;
+  	  	box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.2),
+			  	  	0px -1px 0px #333,
+  	  				4px 4px 10px rgba(0, 0, 0, 0.2),
+  	  				0px 4px 10px rgba(0, 0, 0, 0.2);
+  	  }
+
+  	  .top{
+  	  	text-align: center;
+
+  	  }
+
+  	  .top img {
+  	  	cursor: pointer;
+  	  }
+
+  	  .topicon{
+  	  	display:inline-block;
+  	  	
+  	  	width:70px;
+  	  	height: 70px;
+  	  	border-radius: 35px;
+  	  	box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 1);
+  	  	border: 6px white;
+  	  }
+  	  .topname{
+  	  	display:block;
+  	  	margin: 0;
+  	  	font-size: 10pt;
+  	  	font-weight: 100;
+  	  	font-family:"ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+  	  	color: white;
+  	  	
+  	  }
+  	  .catalog .sub{
+  	  	display:inline-block;
+  	  	width:160px;
+  	  	margin-top: 0px;
+  	  	height: 32px;
+  	  	display:block;
+  	  	position: relative;
+  	  }
+
+
+  	  .subicon{
+  	  	display:inline-block;
+  	  	width: 24px;
+  	  	height: 24px;
+  	  	border-radius: 12px;
+  	  	box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 1);
+  	  	margin: 4px 0 0 16px;
+  	  }
+  	  .subname{
+  	  	display:inline-block;
+  	  	margin:7px 0 0 6px;
+  	  	padding-top: 5px;
+  	  	font-size: 10pt;
+  	  	line-height: ;
+  	  	vertical-align: top;
+  	  	font-family:"ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+  	  	line-height: 90%;
+  	  	word-break: break-all;
+  	  	color: #C4C4C4;
+  	  }
+  	  .subname2{
+  	  	display:inline-block;
+  	  	margin:1px 0 0 6px;
+  	  	padding-top: 5px;
+  	  	font-size: 10pt;
+  	  	line-height: ;
+  	  	vertical-align: top;
+  	  	font-family:"ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+  	  	line-height: 90%;
+  	  	word-break: break-all;
+  	  	color: #C4C4C4;
+  	  }
+
+  	  .more_button{
+  	  	vertical-align: bottom;
+  	  	
+  	  	z-index: 2;
+  	  	/*background-image: url(more.png);*/
+  	  }
+
+  	  .foot{
+  	  	float:left;
+  	  	display:inline-block;
+  	  	margin-left: 24%;
+  	  	font-family:"ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+  	  	font-size: 9pt; 
+  	  	color: #6F6F6F;
+  	  	width: 70%;
+  	  }  
+
+  	  .about{
+  	  	
+  	  }
+
+  	  .share{
+  	  	position: 10%;  	  	
+  	  	float:right;
+  	  	width:6%;
+  	  }
+
+  	  .comment {
+  	  	color: #eee;
+  	  	text-align: left;
+  	  }
+  	  #disqus_thread {
+  	  	display: none;
+  	  }
+
+  	  .copyright{
+
+  	  	float:left;
+  	  }
+  	</style>
+
+    <title>aisee</title>
+    
+</head>
+
+<body>
+
+
+<!-- Copyright  2005. Spidersoft Ltd -->
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+
+<div id="fb-root"></div>
+<div class='kw'>
+  <img src="searchicon.png" class="searchicon">
+	<input  id="kw" autocomplete="off"><br/>
+  <a href="sex/sex.html" target="_blank"><img src="image/logo.png"></a></br>
+  <div class="info"> </div>
+</div>
+
+<div class='popular'>
+  <p class='catalogname'>常用</p>
+	  <div class='top'> <a href="www.google.com" target="_blank"><img  id='google' class="pop" src="image/google.png"  onclick='search(this)' /></a>	
+	  </div>
+	  <div class='top'> <a href="https://www.baidu.com" target="_blank"><img  id='baidu' class="pop" src="image/baidu.png"  onclick='search(this)' /></a>	
+	  </div>
+	  <div class='top'> <a href="https://mijisou.com/" target="_blank"><img  id='mijisou' class="pop" src="image/mijisou.png"  onclick='search(this)' /></a>	
+	  </div>
+	  <div class='top'> <a href="www.sougou.com" target="_blank"><img  id='sogou' class="pop" src="image/sougou.png"  onclick='search(this)' /></a>
+	  </div>
+	  <div class='top'> <a href="www.bing.com" target="_blank"><img  id='bing' class="pop" src="image/bing.png"  onclick='search(this)' /></a>
+	  </div>
+	  <div class='top'> <a href="www.yahoo.com" target="_blank"><img  id='yahoo' class="pop" src="image/yahho.png"  onclick='search(this)' /></a>
+	  </div>
+	  <div class='top'> <a href="www.ask.com" target="_blank"><img  id='ask' src="image/ask.png" class="pop" onclick='search(this)' /></a>
+	  </div>
+	  <div class='top'> <a href="www.duckduckgo.com" target="_blank"><img  id='duckduckgo' src="image/duckduckgo.png" class="pop" onclick='search(this)' /></a>
+	  </div>
+	  <div class='top'> <a href="www.yandex.com" target="_blank"><img  id='yandex' class="pop" src="image/yandex.png"  onclick='search(this)' /></a>
+	  </div>
+	  <div class='top'> <a href="image/wolf.png" target="_blank"><img  id='wolframalpha' class="pop" src="image/wolf.png"  onclick='search(this)' /></a>
+	  </div>
+</div>
+
+<div class='entrances'>
+<div class='catalog'>
+  <p class='catalogname'>google</p>
+    <div class='top'> <a href="https://myaccount.google.com/" target="_blank"><img  id='googleaccount' src="image/google.png" class="topicon" onclick='search(this)' /></a><p class='topname'>account</p>
+</div>
+    <div class='sub'> <img  id='calendar' data-original="image/calendar.png"  class="subicon"  />
+      <p class='subname'>日历</p>
+    </div>
+    <div class='sub'> <img  id='keep' data-original="image/keep.png"  class="subicon" onclick='search(this)' />
+      <p class='subname'>Keep</p>
+    </div>    
+    <div class='sub'> <img  id='gmail' data-original="image/gmail.png"  class="subicon" onclick='search(this)' />
+      <p class='subname'>Gmail</p>
+    </div>
+    <div class='sub'> <img  id='docs' data-original="image/docs.png"  class="subicon" onclick='search(this)' />
+      <p class='subname'>文档</p>
+    </div>
+    <div class='sub'> <img  id='sheets' class="subicon" data-original="image/sheets.png"  onclick='search(this)' />
+      <p class='subname'>表格</p>
+    </div>
+    <div class='sub'> <img  id='ppt' class="subicon" data-original="image/ppt.png"  onclick='search(this)' />
+      <p class='subname'>幻灯片</p>
+    </div>
+	  <div class='sub'>
+    <img  id='youtube' data-original="image/youtube.png" class="subicon" onclick='search(this)' />
+		<p class='subname'>YouTube</p>
+    </div>
+    <div class='sub'> <img  id='drive' class="subicon" data-original="image/drive.png"  onclick='search(this)' />
+      <p class='subname'>Drive</p>
+    </div>
+    <div class='sub'> <img  id='news' data-original="image/news.png" class="subicon" onclick='search(this)' />
+      <p class='subname'>新闻</p>
+    </div>
+    <div class='sub'> <img  id='photos' data-original="image/gallery.png" class="subicon" onclick='search(this)' />
+      <p class='subname'>相册</p>
+    </div>
+	  <div class='sub'> <img  id='maps' data-original="image/map.png" class="subicon" onclick='search(this)' />
+    <p class='subname'>地图</p>
+    </div>
+	  <div class='sub'> <img  id='earth' data-original="image/earth.png" class="subicon" onclick='search(this)' />
+    <p class='subname'>地球</p>
+    </div>
+  </div>
+		  
+  <div class='catalog'>
+      <p class='catalogname'>资源</p>
+      <div class='top'>
+        <img  id='bt' class="topicon" src="image/bt.png"  onclick='search(this)' />
+        <p class='topname'>聚合搜索</p>
+      </div>
+      <div class='sub'>
+        <img  id='torrentkitty' data-original="image/torrentkitty.png"  class="subicon" onclick='search(this)' /><p class='subname'>torrentkitty</p>
+      </div>
+      <div class='sub'>
+        <img  id='cilimao' data-original="image/cilimao.png"  class="subicon" onclick='search(this)' /><p class='subname'>磁力猫</p>
+      </div>
+      <div class='sub'>
+        <img  id='zhongzifuli' data-original="image/zhongzifuli.png"  class="subicon" onclick='search(this)' /><p class='subname'>种子福利</p>
+      </div>
+	<div class='sub'>
+        <img  id='cupfox' data-original="image/cupfox.png" class="subicon" onclick='search(this)' /><p class='subname'>茶杯狐</p>
+      </div>
+      <div class='sub'>
+        <img  id='quzhuanpan' data-original="image/quzhuanpan.png"  class="subicon" onclick='search(this)' /><p class='subname'>去转盘</p>
+      </div>
+  <div class='sub'>
+    <img  id='panc' data-original="image/panc.png"  class="subicon" onclick='search(this)' /><p class='subname'>胖次</p>
+    </div>
+  <div class='sub'>
+    <img  id='panduoduo' data-original="image/panduoduo.png"  class="subicon" onclick='search(this)' /><p class='subname'>盘多多</p>
+    </div>
+  <div class='sub'>
+    <img  id='80s' data-original="image/80s.png"  class="subicon" onclick='search(this)' /><p class='subname'>80s</p>
+    </div>
+      <div class='sub'>
+        <img  id='btdy' data-original="image/btdy.png"  class="subicon" onclick='search(this)' /><p class='subname'>BT电影</p>
+      </div>
+    </div>
+		  
+  <div class='catalog'>
+    <p class='catalogname'>知识</p>
+    <div class='top'>
+      <img  id='zt' src="image/zt.png" class="topicon" onclick='search(this)' /><p class='topname'>学术数据库</p>
+      </div>
+	<div class='sub'>
+      <img  id='cnki' data-original="image/cnki.png" class="subicon" onclick='search(this)' /><p class='subname'>知网</p>
+      </div>
+    <div class='sub'>
+      <img  id='idate' data-original="image/idate.png" class="subicon" onclick='search(this)' /><p class='subname'>iDate</p>
+      </div>
+    <div class='sub'>
+      <img  id='rrzxw' data-original="image/rrzxw.png" class="subicon" onclick='search(this)' /><p class='subname'>人人自学网</p>
+      </div>
+    <div class='sub'>
+      <img  id='51zxw' data-original="image/51zxw.png"  class="subicon" onclick='search(this)' /><p class='subname'>我要自学网</p>
+      </div>
+    <div class='sub'>
+      <img  id='163class' data-original="image/163class.png" class="subicon" onclick='search(this)' /><p class='subname'>网易公开课</p>
+      </div>
+    <div class='sub'>
+      <img  id='mooc' data-original="image/mooc.png"  class="subicon" onclick='search(this)' /><p class='subname'>慕课</p>
+      </div>
+    <div class='sub'>
+      <img  id='cnmooc' data-original="image/haodaxue.png" class="subicon" onclick='search(this)' /><p class='subname'>好大学在线</p>
+      </div>
+    <div class='sub'>
+      <img  id='qqke' data-original="image/qqke.png" class="subicon" onclick='search(this)' /><p class='subname'>腾讯课堂</p>
+      </div>
+    <div class='sub'>
+      <img  id='163study' data-original="image/163study.png"  class="subicon" onclick='search(this)' /><p class='subname'>网易云课堂</p>
+      </div>
+    <div class='sub'>
+      <img  id='ted' data-original="image/ted.png"  class="subicon" onclick='search(this)' /><p class='subname'>Ted</p>
+      </div>
+    <div class='sub'>
+      <img  id='zhihu' data-original="image/zhihu.png"  class="subicon" onclick='search(this)' /><p class='subname'>知乎</p>
+      </div>
+    <div class='sub'>
+      <img  id='quora' data-original="image/quora.png"  class="subicon" onclick='search(this)' /><p class='subname'>Quora</p>
+      </div>
+  <div class='sub'>
+    <img  id='asx' data-original="image/asx.png" class="subicon" onclick='search(this)' /><p class='subname'>爱思想</p>
+    </div>
+  <div class='sub'>
+    <img  id='xinli001' data-original="image/xinli001.png" class="subicon" onclick='search(this)' /><p class='subname'>壹心理</p>
+    </div>
+    
+    <div class='sub'>
+      <img  id='rrdscpjl' data-original="image/rrdscpjl.png"  class="subicon" onclick='search(this)' /><p class='subname'>人人都是产品经理</p>
+      </div>
+    </div>
+
+  <div class='catalog'>
+    <p class='catalogname'>设计</p>
+    <div class='top'> <a href="https://hao.uisdc.com/" target="_blank"><img  id='uisdc' src="image/youshe.png" class="topicon" onclick='search(this)' /></a>
+      <p class='topname'>优设导航</p>
+      </div>
+    <div class='sub'>
+      <img  id='sjdh' data-original="image/sjdh.png" class="subicon" onclick='search(this)' /><p class='subname'>设计导航</p>
+    </div><div class='sub'>
+      <img  id='tuyi' data-original="image/tuyi.png" class="subicon" onclick='search(this)' /><p class='subname'>图翼设计</p>
+      </div>
+    <div class='sub'>
+      <img  id='txsj' data-original="image/pinterest.png" class="subicon" onclick='search(this)' /><p class='subname'>腾讯设计</p>
+      </div>
+    <div class='sub'>
+      <img  id='zcool' data-original="image/zcool.png"  class="subicon" onclick='search(this)' /><p class='subname'>站酷</p>
+      </div>
+    <div class='sub'>
+      <img  id='huaban'  data-original="image/huaban.png" class="subicon" onclick='search(this)' /><p class='subname'>花瓣</p>
+      </div>
+    <div class='sub'>
+      <img  id='dribbble' data-original="image/dribbble.png"  class="subicon" onclick='search(this)' /><p class='subname'>Dribbble</p>
+      </div>
+    <div class='sub'>
+      <img  id='behance' data-original="image/behance.png" class="subicon" onclick='search(this)' /><p class='subname'>Behance</p>
+      </div>
+    <div class='sub'>
+      <img  id='pinterest' data-original="image/pinterest.png" class="subicon" onclick='search(this)' /><p class='subname'>Pinterest</p>
+      </div>
+    <div class='sub'>
+      <img  id='tuchong' data-original="image/tuchong.png"  class="subicon" onclick='search(this)' /><p class='subname'>图虫</p>
+      </div>
+    <div class='sub'>
+      <img  id='zgs' data-original="image/zgs.png"  class="subicon" onclick='search(this)' /><p class='subname'>中国色</p>
+      </div>
+    <div class='sub'>
+      <img  id='rbs' data-original="image/rbs.png"  class="subicon" onclick='search(this)' /><p class='subname'>日本色</p>
+      </div>
+      <div class='sub'>
+      <img  id='shijueme' data-original="image/shijueme.png" class="subicon" onclick='search(this)' /><p class='subname'>视觉ME</p>
+      </div>
+	  <div class='sub'>
+		<img  id='cnd' data-original="image/cnd.png" class="subicon" onclick='search(this)' /><p class='subname'>CND设计网</p>
+		</div>  
+	  <div class='sub'>
+	<img  id='chuangyiren' data-original="image/chuangyiren.png"  class="subicon" onclick='search(this)' /><p class='subname'>创意人插画</p>
+		  </div>
+	  <div class='sub'>
+		  <img  id='niice' data-original="image/niice.png"  class="subicon" onclick='search(this)' /><p class='subname'>Niice</p>
+		  </div>
+	  <div class='sub'>
+		  <img  id='eeff' data-original="image/eeff.png"  class="subicon" onclick='search(this)' /><p class='subname'>穿针引线</p>
+		  </div>
+	  <div class='sub'>
+		  <img  id='ziticq' data-original="image/ziticq.png"  class="subicon" onclick='search(this)' /><p class='subname'>字体传奇</p>
+		  </div>
+	  <div class='sub'>
+		  <img  id='sjzj' data-original="image/sjzj.png"  class="subicon" onclick='search(this)' /><p class='subname'>设计之家</p>
+		  </div>
+	  <div class='sub'>
+		  <img  id='90sheji' data-original="image/90sheji.png"  class="subicon" onclick='search(this)' /><p class='subname'>90设计</p>
+		  </div>
+	  <div class='sub'>
+		  <img  id='miyuansu' data-original="image/miyuansu.png"  class="subicon" onclick='search(this)' /><p class='subname'>觅元素</p>
+		  </div>
+	  <div class='sub'>
+		  <img  id='zhu7jie' data-original="image/zhu7jie.png"  class="subicon" onclick='search(this)' /><p class='subname'>猪七戒素材</p>
+		  </div>
+	  <div class='sub'>
+		  <img  id='pslm' data-original="image/pslm.png"  class="subicon" onclick='search(this)' /><p class='subname'>PS联盟</p>
+		  </div>
+	  <div class='sub'>
+		  <img  id='psxx' data-original="image/psxx.png"  class="subicon" onclick='search(this)' /><p class='subname'>PS学习</p>
+		  </div>
+	  <div class='sub'>
+      <img  id='ckt' data-original="image/chuangketie.png" class="subicon" onclick='search(this)' /><p class='subname'>创客贴</p>
+      </div>
+	  <div class='sub'>
+      <img  id='canva' data-original="image/canva.png" class="subicon" onclick='search(this)' /><p class='subname'>Canva</p>
+      </div>
+		</div>
+		  
+  <div class='catalog'>
+    <p class='catalogname'>社交</p>
+    <div class='top'> <a href="https://www.douban.com/" target="_blank"><img  id='douban' class="topicon" src="image/douban.png"   onclick='search(this)' /></a>
+      <p class='topname'>豆瓣</p>
+      </div>
+    <div class='sub'>
+      <img  id='facebook' data-original="image/facebook.png" class="subicon" onclick='search(this)' /><p class='subname'>Facebook</p>
+      </div>
+    <div class='sub'>
+      <img  id='twitter' data-original="image/twitter.png"  class="subicon" onclick='search(this)' /><p class='subname'>Twitter</p>
+      </div>
+    <div class='sub'>
+      <img  id='ins' data-original="image/instagram.png"  class="subicon" onclick='search(this)' /><p class='subname'>Instagram</p>
+    </div>
+    <div class='sub'>
+      <img  id='tumblr' data-original="image/tumblr.png"  class="subicon" onclick='search(this)' /><p class='subname'>Tumblr</p>
+      </div>
+    <div class='sub'>
+    <img  id='weibo' data-original="image/weibo.png"  class="subicon" onclick='search(this)' /><p class='subname'>微博</p>
+    </div>
+	  <div class='sub'>
+        <img  id='pixiv' data-original="image/pixiv.png"  class="subicon" onclick='search(this)' /><p class='subname'>Pixiv</p>
+        </div>
+    </div>		  
+		  
+  <div class='catalog'>
+    <p class='catalogname'>论坛</p>
+    <div class='top'> <a href="https://www.52pojie.cn/" target="_blank"><img  id='52pj' class="topicon" src="image/52pj.png"  onclick='search(this)' /></a>
+      <p class='topname'>吾爱破解</p>
+      </div>
+  <div class='sub'>
+    <img  id='csdn' data-original="image/csdn.png" class="subicon" onclick='search(this)' /><p class='subname'>CSDN</p>
+    </div>
+    <div class='sub'>
+      <img  id='chongbuluo' data-original="image/chongbuluo.png" class="subicon" onclick='search(this)' /><p class='subname'>虫部落</p>
+      </div>
+  <div class='sub'>
+    <img  id='github' data-original="image/github.png" class="subicon" onclick='search(this)' /><p class='subname'>GitHub</p>
+    </div>
+    <div class='sub'>
+      <img  id='dfg' data-original="image/dianfeng.png"  class="subicon" onclick='search(this)' /><p class='subname'>巅峰阁</p>
+      </div>
+    <div class='sub'>
+      <img  id='jishuqq' data-original="image/jishuqq.png"  class="subicon" onclick='search(this)' /><p class='subname'>技术QQ网</p>
+      </div>
+    <div class='sub'>
+      <img  id='zhiyoo' data-original="image/zhiyou.png" class="subicon" onclick='search(this)' /><p class='subname'>智友论坛</p>
+      </div>
+    <div class='sub'>
+      <img  id='dsqn' data-original="image/dsqn.png"  class="subicon" onclick='search(this)' /><p class='subname'>屌丝青年</p>
+      </div>
+    <div class='sub'>
+      <img  id='yishimei' data-original="image/ysmwl.png"  class="subicon" onclick='search(this)' /><p class='subname'>亦是美网络</p>
+      </div>
+    <div class='sub'>
+      <img  id='gfan' data-original="image/gfan.png"  class="subicon" onclick='search(this)' /><p class='subname'>机锋论坛</p>
+      </div>
+  <div class='sub'>
+    <img  id='xda' data-original="image/xda.png"  class="subicon" onclick='search(this)' /><p class='subname'>XDA</p>
+    </div>
+    </div>		  
+		  
+  <div class='catalog'>
+      <p class='catalogname'>小工具</p>
+      <div class='top'> <a href="https://tool.lu/" target="_blank"><img  id='tools' class="topicon" src="image/tools.png"  onclick='search(this)' /></a>
+        <p class='topname'>在线工具</p>
+      </div>
+ <div class='sub'>
+    <img  id='miku' data-original="image/miku.png" class="subicon" onclick='search(this)' /><p class='subname'>Miku Tools</p>
+    </div>
+  <div class='sub'>
+    <img  id='dnqia' data-original="image/dnqia.png" class="subicon" onclick='search(this)' /><p class='subname'>短视频解析</p>
+    </div>
+  <div class='sub'>
+    <img  id='ttjx' data-original="image/ttjx.png"  class="subicon" onclick='search(this)' /><p class='subname'>Twitter解析</p>
+    </div>
+  <div class='sub'>
+    <img  id='atool' data-original="image/atool.png"  class="subicon" onclick='search(this)' /><p class='subname'>ATool</p>
+    </div>	    
+      <div class='sub'>
+        <img  id='zhibo' data-original="image/zhibo.png" class="subicon" onclick='search(this)' /><p class='subname'>全国电视直播</p>
+      </div>
+  <div class='sub'>
+    <img  id='bangong' data-original="image/bangong.png"  class="subicon" onclick='search(this)' /><p class='subname'>办公资源网</p>
+    </div>		    
+  <div class='sub'>
+    <img  id='zzsc' data-original="image/zzsc.png"  class="subicon" onclick='search(this)' /><p class='subname'>站长素材</p>
+    </div>
+    </div>		  
+		  
+  <div class='catalog'>
+	    <p class='catalogname'>书籍</p>
+	    <div class='top'> <a href="https://book.douban.com" target="_blank"><img  id='doubanbook' src="image/doubanbook.png"  class="topicon" onclick='search(this)' /></a>
+	      <p class='topname'>豆瓣读书</p>
+        </div>
+	    <div class='sub'>
+	      <img  id='readfree' data-original="image/readfree.png"  class="subicon" onclick='search(this)' /><p class='subname'>我与书</p>
+        </div>
+	    <div class='sub'>
+	      <img  id='jiumo' data-original="image/jiumo.png"  class="subicon" onclick='search(this)' /><p class='subname'>鸠摩搜书</p>
+        </div>
+	    <div class='sub'>
+	      <img  id='shuge' data-original="image/shuge.png"  class="subicon" onclick='search(this)' /><p class='subname'>书格</p>
+        </div>
+	    <div class='sub'>
+	      <img  id='kugua' data-original="image/kugua.png"  class="subicon" onclick='search(this)' /><p class='subname'>苦瓜书盘</p>
+        </div>
+	    <div class='sub'>
+	        <img  id='sobooks' data-original="image/sobooks.png"  class="subicon" onclick='search(this)' /><p class='subname'>SoBooks</p>
+        </div>
+	    <div class='sub'>
+	      <img  id='shuban' data-original="image/shuban.png"  class="subicon" onclick='search(this)' /><p class='subname'>书伴</p>
+        </div>
+	    <div class='sub'>
+	      <img  id='epubee' data-original="image/epubee.png"  class="subicon" onclick='search(this)' /><p class='subname'>ePUBee</p>
+        </div>
+	    <div class='sub'>
+	        <img  id='mebook' data-original="image/mebook.png"  class="subicon" onclick='search(this)' /><p class='subname'>我的小书屋</p>
+        </div>
+	    <div class='sub'>
+	        <img  id='xingke' data-original="image/xingke.png"  class="subicon" onclick='search(this)' /><p class='subname'>醒客读书</p>
+        </div>
+	   <div class='sub'>
+	      <img  id='epubw' data-original="image/readfree.png"  class="subicon" onclick='search(this)' /><p class='subname'>ePUBw</p>
+        </div>
+ 	  <div class='sub'>
+	      <img  id='lorefree' data-original="image/readfree.png"  class="subicon" onclick='search(this)' /><p class='subname'>LoreFree</p>
+        </div>
+    </div>
+		  
+  <div class='catalog'>
+    <p class='catalogname'>软件</p>	
+    <div class='top'> <a href="https://play.google.com/store/apps" target="_blank"><img  id='playstore' class="topicon" src="image/playstore.png"  onclick='search(this)' /></a>
+      <p class='topname'>PlayStore</p>
+      </div>
+  <div class='sub'>
+    <img  id='iplaysoft' data-original="image/yiciyuan.png"  class="subicon" onclick='search(this)' /><p class='subname'>异次元</p>
+    </div>
+  <div class='sub'>
+    <img  id='shaoshupai' data-original="image/shaoshupai.png"  class="subicon" onclick='search(this)' /><p class='subname'>少数派</p>
+    </div>
+  <div class='sub'>
+    <img  id='appinn' data-original="image/appinn.png"  class="subicon" onclick='search(this)' /><p class='subname'>小众软件</p>
+    </div>
+    <div class='sub'>
+      <img  id='dayanzai' data-original="image/dayanzai.png"  class="subicon" onclick='search(this)' /><p class='subname'>大眼旭仔</p>
+      </div>
+  <div class='sub'>
+    <img  id='apkpure' class='subicon' data-original="image/apkpure.png"  onclick='search(this)' /><p class='subname'>Apkpure</p>
+    </div>
+    <div class='sub'>
+      <img  id='yx' class='subicon' data-original="image/yixing.png"  onclick='search(this)' /><p class='subname'>异星软件空间</p>
+      </div>
+    </div>
+		  		  
+  <div class='catalog'>
+    <p class='catalogname'>个站</p>
+    
+    <div class='top'> <a href="https://youquhome.com/" target="_blank"><img  id='ycwz' class="topicon" src="image/yqwz.png"   onclick='search(this)' /></a>
+      <p class='topname'>有趣网址之家</p>
+      </div>
+    
+  <div class='sub'>
+    <img  id='lusongsong' data-original="image/lusongsong.png"  class="subicon" onclick='search(this)' /><p class='subname'>卢松松博客</p>
+    </div>
+  <div class='sub'>
+    <img  id='yhzdbm' data-original="image/yhzdbm.png"  class="subicon" onclick='search(this)' /><p class='subname'>樱花庄的白猫</p>
+    </div>
+  <div class='sub'>
+    <img  id='fcj' data-original="image/fangcunjian.png"  class="subicon" onclick='search(this)' /><p class='subname'>方寸间</p>
+    </div>
+    <div class='sub'>
+      <img  id='yyxwz' class='subicon' data-original="image/yyxwz.png"   onclick='search(this)' /><p class='subname'>忧郁小王子</p>
+      </div>
+    <div class='sub'>
+      <img  id='businiao' class='subicon' data-original="image/businiao.png"   onclick='search(this)' /><p class='subname'>不死鸟</p>
+      </div>
+    </div>
+		  
+  <div class='catalog'>
+      <p class='catalogname'>云空间</p>
+      <div class='top'> <a href="https://yun.baidu.com" target="_blank"><img  id='yunbaidu' class="topicon" src="image/baiduyun.png"  onclick='search(this)' /></a>
+        <p class='topname'>百度网盘</p>
+      </div>
+  <div class='sub'>
+    <img  id='drive' data-original="image/drive.png" class="subicon" onclick='search(this)' /><p class='subname'>Drive</p>
+    </div>
+  <div class='sub'>
+    <img  id='onedrive' data-original="image/onedrive.png"  class="subicon" onclick='search(this)' /><p class='subname'>OneDrive</p>
+    </div>
+      <div class='sub'>
+        <img  id='lanzou' data-original="image/lanzou.png"  class="subicon" onclick='search(this)' /><p class='subname'>蓝奏云</p>
+      </div>
+  <div class='sub'>
+    <img  id='jianguoyun' data-original="image/nutstore.png" class="subicon" onclick='search(this)' /><p class='subname'>坚果云</p>
+    </div>
+      <div class='sub'>
+        <img  id='icloud' data-original="image/icloud.png"  class="subicon" onclick='search(this)' /><p class='subname'>iCloud</p>
+      </div>
+		    
+      <div class='sub'>
+        <img  id='dropbox' data-original="image/dropbox.png"  class="subicon" onclick='search(this)' /><p class='subname2'>DropBox</p>
+      </div>
+      <div class='sub'>
+        <img  id='ctfilecn' data-original="image/ct.png"  class="subicon" onclick='search(this)' /><p class='subname'>城通网盘</p>
+      </div>
+      <div class='sub'>
+        <img  id='ctfile' data-original="image/ctfile.png" class="subicon" onclick='search(this)' /><p class='subname'>Ctfile</p>
+      </div>
+      <div class='sub'>
+        <img  id='bitqiu' data-original="image/btqiu.png" class="subicon" onclick='search(this)' /><p class='subname'>比特球网盘</p>
+      </div>
+      <div class='sub'>
+        <img  id='feemoo' data-original="image/femoo.png"  class="subicon" onclick='search(this)' /><p class='subname'>飞猫云</p>
+      </div>
+    </div>		
+		  		  		  
+  <div class='catalog'>
+    <p class='catalogname'>导航</p>
+    <div class='top'> <a href="http://www.gkbang.cn/link/" target="_blank"><img  id='gkbang' class="topicon" src="image/gk.png"  onclick='search(this)' /></a>
+      <p class='topname'>果壳任意门</p> 
+      </div>
+    
+  <div class='sub'>
+    <img  id='chongbuluo' data-original="image/chongbuluo.png" class="subicon" onclick='search(this)' /><p class='subname'>虫部落</p>
+    </div>
+    <div class='sub'>
+      <img  id='lerso' data-original="image/leso.png" class="subicon" onclick='search(this)' /><p class='subname'>乐搜导航</p>
+      </div>
+    <div class='sub'>
+      <img  id='geekji' data-original="image/ti.png"  class="subicon" onclick='search(this)' /><p class='subname'>钛导航</p>
+      </div>
+    <div class='sub'>
+      <img  id='workdh' data-original="image/workdh.png" class="subicon" onclick='search(this)' /><p class='subname'>沃克导航</p>
+      </div>
+  <div class='sub'>
+    <img  id='workxs' data-original="image/workxs.png" class="subicon" onclick='search(this)' /><p class='subname'>沃克学术</p>
+    </div>
+    <div class='sub'>
+      <img  id='workcp' data-original="image/workjl.png" class="subicon" onclick='search(this)' /><p class='subname'>沃克产品经理</p>
+      </div>
+    <div class='sub'>
+      <img  id='workcj' data-original="image/workcj.png" class="subicon" onclick='search(this)' /><p class='subname'>沃克财经</p>
+      </div>
+    <div class='sub'>
+      <img  id='seeseed' data-original="image/seeseed.png" class="subicon" onclick='search(this)' /><p class='subname'>Seeseed</p>
+      </div>
+    <div class='sub'>
+      <img  id='psefan' data-original="image/psefan.png"  class="subicon" onclick='search(this)' /><p class='subname'>饭团导航</p>
+      </div>
+    <div class='sub'>
+      <img  id='chuangzaoshi' data-original="image/chuangzaoshi.png"  class="subicon" onclick='search(this)' /><p class='subname'>创造狮</p>
+      </div>
+    <div class='sub'>
+      <img  id='hippter' data-original="image/hippter.png"  class="subicon" onclick='search(this)' /><p class='subname'>HiPPTer</p>
+      </div>
+    <div class='sub'>
+      <img  id='wxbbx' data-original="image/wxbbx.png"  class="subicon" onclick='search(this)' /><p class='subname'>微信工具箱</p>
+      </div>
+    <div class='sub'>
+      <img  id='guozhi' data-original="image/guozhi.png"  class="subicon" onclick='search(this)' /><p class='subname'>果汁导航</p>
+      </div>
+    </div>		  
+		  
+  <div class='catalog'>
+    <p class='catalogname'>娱乐</p>
+    <div class='top'> <a href="https://www.yikm.net/" target="_blank"><img  id='xiaobawang' src="image/xiaobawang.png" class="topicon" onclick='search(this)' /></a>
+      <p class='topname'>小霸王</p>
+      </div>
+    
+  <div class='sub'>
+    <img  id='blzysy' data-original="image/blzysy.png"  class="subicon" onclick='search(this)' /><p class='subname'>堡垒之夜攻略</p>
+    </div>
+  <div class='sub'>
+    <img  id='hlsg' data-original="image/hlsg.png"  class="subicon" onclick='search(this)' /><p class='subname'>欢乐时光</p>
+    </div>
+    <div class='sub'>
+      <img  id='yhhyh' data-original="image/yhhyh.png" class="subicon" onclick='search(this)' /><p class='subname'>一画换一画</p>
+      </div>
+    <div class='sub'>
+      <img  id='ald' data-original="image/ald.png"  class="subicon" onclick='search(this)' /><p class='subname'>阿拉丁</p>
+      </div>
+    <div class='sub'>
+      <img  id='neave' data-original="image/neave.png"  class="subicon" onclick='search(this)' /><p class='subname'>Neave</p>
+      </div>
+    <div class='sub'>
+      <img  id='geektyper' data-original="image/geek.png"  class="subicon" onclick='search(this)' /><p class='subname'>geek_typer</p>
+      </div>
+    <div class='sub'>
+      <img  id='i8home' data-original="image/i8home.png"  class="subicon" onclick='search(this)' /><p class='subname'>家园</p>
+      </div>
+    </div>
+		  	  
+  <div class='catalog'>
+    <p class='catalogname'>生活</p>
+    <div class='top'> <a href="http://guozhivip.com/rank/" target="_blank"><img  id='guozhiph' class="topicon" src="image/guozhi.png" onclick='search(this)' /></a>
+      <p class='topname'>果汁排行榜</p>
+      </div>
+	  <div class='sub'>
+    <img  id='alipay' data-original="image/alipay.png" class="subicon" onclick='search(this)' /><p class='subname'>支付宝</p>
+    </div>
+  <div class='sub'>
+    <img  id='taobao' data-original="image/taobao.png" class="subicon" onclick='search(this)' /><p class='subname'>淘宝</p>
+    </div>
+    <div class='sub'>
+      <img  id='jd' data-original="image/jingdong.png" class="subicon" onclick='search(this)' /><p class='subname'>京东</p>
+      </div>
+	  <div class='sub'>
+      <img  id='chsi' data-original="image/chsi.png" class="subicon" onclick='search(this)' /><p class='subname'>学信网</p>
+      </div>
+    <div class='sub'>
+      <img  id='weixingzpt' data-original="image/weixingzpt.png" class="subicon" onclick='search(this)' /><p class='subname'>微信公众平台</p>
+      </div>
+    <div class='sub'>
+      <img  id='buluoqq' data-original="image/buluo.png" class="subicon" onclick='search(this)' /><p class='subname'>兴趣部落运营</p>
+      </div>
+	  <div class='sub'>
+        <img  id='chadan' data-original="image/chadan.png" class="subicon" onclick='search(this)' /><p class='subname'>茶蛋权益</p>
+    </div>
+	  <div class='sub'>
+        <img  id='1688' data-original="image/1688.png" class="subicon" onclick='search(this)' /><p class='subname'>1688</p>
+    </div>
+    <div class='sub'>
+          <img  id='hytx' data-original="image/huiyou.png" class="subicon" onclick='search(this)' /><p class='subname'>惠友通讯</p>
+          </div>
+    <div class='sub'>
+      <img  id='szsjpf' data-original="image/szsjpf.png" class="subicon" onclick='search(this)' /><p class='subname'>深圳手机批发</p>
+      </div>
+  <div class='sub'>
+    <img  id='lysm' data-original="image/lysm.png"  class="subicon" onclick='search(this)' /><p class='subname'>联盈数码</p>
+    </div>
+    </div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/lazyload.min.js"></script>
+<script type="text/javascript" src="js/open_link.js"></script>`
+<script type="text/javascript" src="js/min.js"></script>
+
+</body>
+</html>
